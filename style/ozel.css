@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer"
+    ;
+    grid-template-rows: 100px 750px 150px;
+    gap: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    header,main,.ikincialan,.teklifler,footer {
+      min-height: 400px 500px 300px 300px 400px;
+    }
+  }
+
+  
+/* HEADER KOD */
+
+header{
+    display: flex;
+    grid-area: header;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    gap: 30px;
+    flex-wrap: nowrap;
+    padding: 30px;
+}
+
+header > img{
+    flex: 0 0 5%;
+    height: 100px;
+}
+
+header > span{
+    display: flex;
+    gap: 40px;
+    flex: 0 1 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+header > span > a{
+    flex: 0 0 17%;
+    font-size: 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+header > span > a:hover{
+    color: rgb(255, 71, 71);
+}
+
+
+/* MAİN KOD */
+
+main{
+    display: flex;
+    grid-area: main;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(87, 10, 10);
+    gap: 13%;
+    padding: 30px;
+}
+
+ div{
+    flex: 0 0 20%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+    background-color: rgb(212, 212, 212);
+    padding: 10px;
+    
+}
+
+
+main > div > img{
+    border-radius: 5%;
+    width: 400px;
+    height: 250px;
+}
+
+
+/* FOOTER KOD */
+
+footer{
+    grid-area: footer;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer > span{
+    color: white;
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+footer > span > h3{
+    color: rgb(172, 0, 0);
+    font-size: 25px;
+}
+footer > span > a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+footer > span > a:hover{
+    color: rgb(255, 71, 71);
+}
